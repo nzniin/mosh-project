@@ -38,6 +38,7 @@ function IssueForm({ issue }: {issue?:Issue}) {
                 await axios.post('/api/issues', data);
         
             router.push('/issues');
+            router.refresh();
             
         } catch (error) {
             setSubmitting(false);
@@ -67,7 +68,7 @@ function IssueForm({ issue }: {issue?:Issue}) {
             {errors.description?.message}
         </ErrorMessage>
         <Button disabled={isSubmitting}>
-           { issue ? 'Update Issue': 'Submit new issue'}{' '}  {isSubmitting && <Spinner/>} \</Button>
+           { issue ? 'Update Issue': 'Submit new issue'}{' '}  {isSubmitting && <Spinner/>} </Button>
     </form>
     </div>
   )

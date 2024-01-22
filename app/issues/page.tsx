@@ -37,7 +37,10 @@ async function IssuesPage() {
         </Table.Body>
       </Table.Root>
     </div>
-  )
-}
+  );
+};
 
-export default IssuesPage
+export const dynamic = 'force-dynamic';
+// export const revalidate = 60;
+
+export default IssuesPage;
