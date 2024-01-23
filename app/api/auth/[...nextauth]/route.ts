@@ -8,13 +8,13 @@ const handler = NextAuth({
     adapter: PrismaAdapter(prisma),
     providers: [
         GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!
-        })
+            clientId: "...",
+            clientSecret: "...",
+        }),
     ],
     session: {
-        strategy: 'jwt'
-    }
+        strategy: 'jwt',
+    },
 });
 
 export { handler as GET, handler as POST}
