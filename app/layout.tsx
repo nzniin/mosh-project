@@ -7,6 +7,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme, ThemePanel } from "@radix-ui/themes";
 import { Container } from "@radix-ui/themes";
 import AuthProvider from "./auth/Provider";
+import  QueryClientProvider  from "@/app/QueryClientProvider";
 
 
 const inter = Inter({ 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className={inter.className}>
+        <QueryClientProvider>
         <AuthProvider>
         <Theme appearance="light" accentColor="violet">
         <NavBar />
@@ -39,6 +41,7 @@ export default function RootLayout({
         {/* <ThemePanel /> */}
         </Theme>
         </AuthProvider>
+        </QueryClientProvider>
         
         </body>
     </html>
