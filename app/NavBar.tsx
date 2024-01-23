@@ -50,7 +50,6 @@ const NavLinks = () => {
         </ul>
     )
 }
-
 const AuthStatus = () => {
     const { status, data: session } = useSession();
 
