@@ -13,9 +13,9 @@ interface Props{
 
 function IssueChart({ open, inProgress, closed}: Props) {
     const data = [
-        { label: 'OPEN', value: 'open'},
-        { label: 'CLOSED', value: 'closed'},
-        { label: 'IN_PROGRESS', value: 'inProgress'}
+        { label: 'Open Issues', value: open, status:'OPEN' },
+        { label: 'In-progress Issues', value: inProgress, status:'IN_PROGRESS' },
+        { label: 'Closed Issues', value: closed, status:'CLOSED' }
     ]
 
 
